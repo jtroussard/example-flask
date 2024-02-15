@@ -8,11 +8,11 @@ steps:
     args: ['test']
 
   # Step 3: Install Python dependencies
-  - name: 'gcr.io/cloud-builders/python'
-    args: ['pip', 'install', '-r', 'requirements.txt']
+  # - name: 'gcr.io/cloud-builders/python'
+  #   args: ['pip', 'install', '-r', 'requirements.txt']
 
   # Step 4: Run the Flask application (assuming it listens on port 8080)
-  - name: 'gcr.io/cloud-builders/python'
-    args: ['app.py']
-    env:
-    - 'PORT=8080'
+  # - name: 'gcr.io/cloud-builders/python'
+  #   args: ['app.py']
+  #   env:
+  #   - 'PORT=8080'
