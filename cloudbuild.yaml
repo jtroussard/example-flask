@@ -1,11 +1,9 @@
 steps:
-  - name: 'gcr.io/cloud-builders/python:3.10'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - 'pip install -r requirements.txt'
+  - name: python
+    entrypoint: pip
+    args: ["install", "-r", "requirements.txt", "--user"]
 
-  - name: 'gcr.io/cloud-builders/python:3.10'
+  - name: python
     entrypoint: 'bash'
     args:
       - '-c'
