@@ -1,11 +1,17 @@
 steps:
   # Step 1: Install dependencies
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
+  - name: 'gcr.io/cloud-builders/python'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'pip install -r requirements.txt'
 
   # Step 2: Run unit tests
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['test']
+  - name: 'gcr.io/cloud-builders/python'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'python -m unittest discover -s tests'
 
 options:
   logging: CLOUD_LOGGING_ONLY
