@@ -10,6 +10,10 @@ def landing_page():
 def landing_page():
     return "<h1>This is a very interesting ABOUT page</h1>"
 
+@app.route('/about/v2')
+def landing_page():
+    return "<h1>This is a very interesting ABOUT page?</h1>"
+
 @app.route('/hello/<name>')
 def hello_name(name):
     return f'Hello {name}!'
