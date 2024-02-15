@@ -6,6 +6,3 @@ steps:
   # Step 2: Run unit tests
   - name: 'gcr.io/cloud-builders/npm'
     args: ['test']
-
-options:
-  logging: CLOUD_LOGGING_ONLY
