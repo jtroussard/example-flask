@@ -1,13 +1,11 @@
 steps:
-  # Step 1: Install dependencies
-  - name: 'gcr.io/cloud-builders/python'
+  - name: 'gcr.io/cloud-builders/python:3.10.6'
     entrypoint: 'bash'
     args:
       - '-c'
       - 'pip install -r requirements.txt'
 
-  # Step 2: Run unit tests
-  - name: 'gcr.io/cloud-builders/python'
+  - name: 'gcr.io/cloud-builders/python:3.10.6'
     entrypoint: 'bash'
     args:
       - '-c'
